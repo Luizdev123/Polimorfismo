@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Polimorfismo;
 
 namespace Abstracao
@@ -24,6 +25,15 @@ namespace Abstracao
             Console.WriteLine();
             Console.WriteLine("Bônus anual - Gerente (" + gerente.Nome + "): R$ " + gerente.CalcularBonusAnual());
             Console.WriteLine("Bônus anual - Desenvolvedor (" + desenvolvedor.Nome + "): R$ " + desenvolvedor.CalcularBonusAnual());
+
+            // Exemplo de polimorfismo com animais
+            Console.WriteLine();
+            Console.WriteLine("Exemplo de Polimorfismo - Animais:");
+            var animais = new List<Animal> { new Leao(), new Macaco(), new Cobra() };
+            foreach (var animal in animais)
+            {
+                animal.EmitirSom();
+            }
         }
     }
 }

@@ -1,1 +1,62 @@
-﻿
+﻿----------------------------Animal.cs-----------------------------------
+
+
+using System;
+
+namespace Polimorfismo
+{
+    internal class Animal
+    {
+        // Método virtual para ser sobrescrito pelas classes derivadas
+        public virtual void EmitirSom()
+        {
+            Console.WriteLine("Som de animal indefinido.");
+        }
+    }
+}
+
+----------------------------------Leao.cs-------------------------------
+
+using System;
+
+namespace Polimorfismo
+{
+    internal class Leao : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("ROAR!");
+        }
+    }
+}
+
+------------------------------Macaco.cs----------------------------------
+
+using System;
+
+namespace Polimorfismo
+{
+    internal class Macaco : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("UGH UGH AAH\n\nAAH!");
+        }
+    }
+}
+
+
+-------------------------------Cobra.cs----------------------------------
+
+using System;
+
+namespace Polimorfismo
+{
+    internal class Cobra : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("SSSSSSS...");
+        }
+    }
+}
